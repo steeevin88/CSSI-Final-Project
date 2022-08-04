@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Ratz</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+  />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  
+  <script src="map.js" type="text/javascript" defer></script>
+  
+
+  
+</head>
+
+<body style="background-color: white;">
+<!-- Line Breaks for Spacing (navbar) -->
+<br>
+<br>
+<section class="hero has-background-danger-dark notification has-text-black-bis has-text-centered">
+  <div class="">
+    <p class="title">GYM RATZ</p>
+    <p class="subtitle">For all your fitness needs.</p>
+  </div>
+</section>
+
+<nav class="navbar fixed" role="navigation" aria-label="main navigation">
+  	<div class="navbar-brand">
+    	<a class="navbar-item" href="index.html">
+      	<img src="logo2.png"width="112" height="112">
+    	</a>
+
+    	<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      	<span aria-hidden="true"></span>
+      	<span aria-hidden="true"></span>
+      	<span aria-hidden="true"></span>
+    	</a>
+  	</div>
+  	<div id="navbarBasicExample" class="navbar-menu">
+    	<div class="navbar-start">
+      	<a class="navbar-item" href = "index.html">
+       	 Home
+      	</a>
+
+      	<a class="navbar-item" href = "personalize.html">
+       	 Personalize
+      	</a>
+
+        <a class="navbar-item" href = "map.html">
+       	 Map
+      	</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Workouts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href = "chest.html">
+            Chest
+          </a>
+          <a class="navbar-item" href = "arms.html">
+            Arms
+          </a>
+          <a class="navbar-item" href = "legs.html">
+            Legs
+          </a>
+          <a class="navbar-item" href = "back.html">
+            Back
+          </a>
+          <a class="navbar-item" href = "core.html">
+            Core
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+    	<div class="navbar-end">
+      	<div class="navbar-item">
+        	<div class="buttons">
+          	<a class="button is-link">
+            	<strong>Sign up</strong>
+          	</a>
+          	<a class="button is-light">
+            	Log in
+          	</a>
+        	</div>
+      	</div>
+    	</div>
+  	</div>
+	</nav>
+
+
+  <div id="map"></div>
+  <script>
+
+    function initMap() {
+      //var map;
+      var location = {
+        lat: 40.00,
+        lng: -70.000
+      }
+
+      // var nearPoint = new google.maps.LatLng(-33.8665433,151.1956316);
+     
+      var mapOptions = {
+        zoom: 12,
+        center: location,
+        
+        mapId: "1488b94226919559"
+      };
+
+      map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  
+
+
+      if (navigator.geolocation) {
+        console.log("Geolocation on");
+        navigator.geolocation.getCurrentPosition((loc) => {
+
+          
+          location.lat = loc.coords.latitude;
+          location.lng = loc.coords.longitude;
+
+    
+
+          map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+          console.log(location.lat)
+          const icon = {
+    url: "home_icon.png", // url
+    scaledSize: new google.maps.Size(50, 50), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+};
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(location.lat
+                                             , location.lng),
+            map: map,
+            icon:icon
+          });
+        }, (err) => {
+          console.log(err);
+          map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        })
+      } else {
+        console.log("No geolocation")
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+      }
+
+      
+
+  var request = {
+    
+    location: location,
+    //radius is in meters
+    radius: '50000',
+    type: ['gym'],
+    
+    }
+
+    
+
+      console.log(request)
+      
+    service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, callback);
+      
+};
+
+
+  
+
+
+      
+      
+      
+    
+
+
+    
+      function callback(results, status) {
+
+        console.log()
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+          }
+        }
+      }
+
+      function createMarker(result) {
+
+         console.log(result.name)
+
+        
+        var marker = new google.maps.Marker({
+            position: result.geometry.location,
+            map: map
+            
+          });
+
+        const infoWindow = new google.maps.InfoWindow ({
+          content: result.name
+        });
+
+
+        marker.addListener("click" , () => {
+          infoWindow.open(map, marker);
+        });
+
+      
+    }
+
+    
+
+   
+
+    
+    // }
+
+
+    
+    
+  </script>
+  
+
+  <script defer 
+    src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBrliqTl7QR2pDiMRj4lyfRf4sQwJ3KEHA&libraries=places&callback=initMap">
+
+  </script>
+<!--   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARQvDZYn5GCVKQXohXXaN4S6BxLCbHx3M&libraries=places"></script> -->
+
+
+</body>
+</html>

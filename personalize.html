@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Ratz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="personalize.js" type="text/javascript" defer></script>
+  </head>
+
+<body>
+	<!-- Line Breaks for Spacing (navbar) -->
+	<br>
+	<br>
+<section class="hero has-background-danger-dark notification has-text-black-bis has-text-centered">
+  	<div class="">
+    	<p class="title is-size-1 has-text-white">Create Your Personal Workout</p>
+  	</div>
+	</section>
+
+<nav class="navbar fixed" role="navigation" aria-label="main navigation">
+  	<div class="navbar-brand">
+    	<a class="navbar-item" href="index.html">
+      	<img src="logo2.png"width="112" height="112">
+    	</a>
+
+    	<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      	<span aria-hidden="true"></span>
+      	<span aria-hidden="true"></span>
+      	<span aria-hidden="true"></span>
+    	</a>
+  	</div>
+  	<div id="navbarBasicExample" class="navbar-menu">
+    	<div class="navbar-start">
+      	<a class="navbar-item" href = "index.html">
+       	 Home
+      	</a>
+
+      	<a class="navbar-item" href = "personalize.html">
+       	 Personalize
+      	</a>
+
+        <a class="navbar-item" href = "map.html">
+       	 Map
+      	</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Workouts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href = "chest.html">
+            Chest
+          </a>
+          <a class="navbar-item" href = "arms.html">
+            Arms
+          </a>
+          <a class="navbar-item" href = "legs.html">
+            Legs
+          </a>
+          <a class="navbar-item" href = "back.html">
+            Back
+          </a>
+          <a class="navbar-item" href = "core.html">
+            Core
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+    	<div class="navbar-end">
+      	<div class="navbar-item">
+        	<div class="buttons">
+          	<a class="button is-link">
+            	<strong>Sign up</strong>
+          	</a>
+          	<a class="button is-light">
+            	Log in
+          	</a>
+        	</div>
+      	</div>
+    	</div>
+  	</div>
+	</nav>
+
+<!-- Body Code -->
+  <div class = "container has-text-centered">
+    <!-- First question of survey -->
+    <section
+      data-category = "schedule"
+      class = "section">
+      <h1 class = "title">How many days a week would you work out?</h1>
+      <div class = "container">
+        <div class = "columns">
+          <!-- A -->
+          <div class = "column has-text-centered">
+            <figure 
+              data-category = "schedule"
+              data-type = "3-days"
+              class = "card-image notification has-background-light is-inline-block"
+              >
+
+              <div class= "container">
+                
+                <img src = "https://www.healthifyme.com/blog/wp-content/uploads/2021/11/How-to-Improve-Body-Strength-Exercises-and-Nutrition.jpg" alt = "Small Gym"/>
+                
+              </div>
+              <div class = "subtitle">3 Days</div>
+            </figure>
+        </div>
+           <!-- B -->
+          <div class = "column has-text-centered">
+            <figure 
+              data-category = "schedule"
+              data-type ="5-days"
+              class = "card-image notification has-background-light is-inline-block"
+              >
+
+              <div class= "container">
+                
+                <img src = "https://cdn.lifehack.org/wp-content/uploads/2014/07/deadlift-benefits-1024x768.jpeg" alt = "Small Gym"/>
+                
+              </div>
+              <div class = "subtitle">5 Days</div>
+            </figure>
+        </div>
+
+          <!-- C -->
+          <div class = "column has-text-centered">
+            <figure 
+              data-category = "schedule"
+              data-type = "7-days"
+              class = "card-image notification has-background-light is-inline-block"
+              >
+
+              <div class= "container">
+                
+                <img src = "https://prodd8.planetfitness.com/sites/default/files/styles/gallery_full_image/public/2019-04/Aubrey%20Huey%20-%20IMG_0531_0.jpg" alt = "Small Gym"/>
+                
+              </div>
+              <div class = "subtitle">7 Days</div>
+            </figure>
+        </div>
+          
+      </div>
+    </section>
+
+    <!-- 2ND QUESTION-->
+
+    <section
+      data-question = "workout"
+      class = "section">
+      <h1 class = "title">What will you focus on?</h1>
+      <div class = "container">
+        <div class = "columns">
+          <!-- A -->
+          <div class = "column has-text-centered">
+            <figure 
+              data-category = "programType"
+              data-type = "weightLoss"
+              class = "card-image notification has-background-light is-inline-block"
+              >
+
+              <div class= "container">
+                
+                <img src = "https://prodd8.planetfitness.com/sites/default/files/styles/gallery_full_image/public/2019-04/Aubrey%20Huey%20-%20IMG_0531_0.jpg" alt = "Small Gym"/>
+                
+              </div>
+              <div class = "subtitle">Weight Loss</div>
+            </figure>
+        </div>
+           <!-- B -->
+          <div class = "column has-text-centered">
+            <figure 
+              data-category = "programType"
+              data-type = "muscleGain"
+              class = "card-image notification has-background-light is-inline-block"
+              >
+
+              <div class= "container">
+                
+                <img src = "https://prodd8.planetfitness.com/sites/default/files/styles/gallery_full_image/public/2019-04/Aubrey%20Huey%20-%20IMG_0531_0.jpg" alt = "Small Gym"/>
+                
+              </div>
+              <div class = "subtitle">Muscle Gain</div>
+            </figure>
+        </div>
+
+          
+      </div>
+    </section>
+    
+  
+  </div>
+  
+</body>
+
+</html>

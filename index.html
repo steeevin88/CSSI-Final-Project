@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Ratz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+		
+    <script src="script.js" type="text/javascript" defer></script>
+  </head>
+
+<body style="background-color: white;">
+	<!-- Line Breaks for Spacing (navbar) -->
+	<br>
+	<br>
+<section class="hero has-background-danger-dark notification has-text-black-bis has-text-centered">
+  	<div class="">
+    	<p class="title has-text-white is-size-1">GYM RATZ</p>
+    	<p class="subtitle has-text-white">For all your fitness needs.</p>
+  	</div>
+	</section>
+
+<nav class="navbar fixed" role="navigation" aria-label="main navigation">
+  	<div class="navbar-brand">
+    	<a class="navbar-item" href="index.html">
+      	<img src="logo2.png"width="100" height="300">
+    	</a>
+
+    	<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      	<span aria-hidden="true"></span>
+      	<span aria-hidden="true"></span>
+      	<span aria-hidden="true"></span>
+    	</a>
+  	</div>
+  	<div id="navbarBasicExample" class="navbar-menu">
+    	<div class="navbar-start">
+      	<a class="navbar-item" href = "index.html">
+       	 Home
+      	</a>
+
+      	<a class="navbar-item" href = "personalize.html">
+       	 Personalize
+      	</a>
+
+        <a class="navbar-item" href = "map.html">
+       	 Map
+      	</a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Workouts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href = "chest.html">
+            Chest
+          </a>
+          <a class="navbar-item" href = "arms.html">
+            Arms
+          </a>
+          <a class="navbar-item" href = "legs.html">
+            Legs
+          </a>
+          <a class="navbar-item" href = "back.html">
+            Back
+          </a>
+          <a class="navbar-item" href = "core.html">
+            Core
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+    	<div class="navbar-end">
+      	<div class="navbar-item">
+        	<div class="buttons">
+          	<a class="button is-link">
+            	<strong>Sign up</strong>
+          	</a>
+          	<a class="button is-light">
+            	Log in
+          	</a>
+        	</div>
+      	</div>
+    	</div>
+  	</div>
+	</nav>
+
+
+
+<!-- ROW 1 -->
+<div class="columns is-centered is-variable is-1">
+	<!-- Column 1 / Text Card -->
+  <div class="column is-one-fifth">
+		<!-- CARD 1 -->
+    <div class = "card">
+      <div class = "card-content">
+        	<p class="title is-size-2">WANT TO WORK OUT?</p>
+					<div class="content"> 
+      			<p class = "is-size-5">"Live the life you've always wanted, starting today." </p>
+      			<ul class="is-size-6">
+      				<li>Discover new workout machines</li>
+      				<li>Develop and create effective personalized routines</li>
+							<li>Leave reviews on machines</li>
+							<li>Build muscle and community</li>
+    				</ul>
+    			</div>
+  			</div>
+			</div> 
+  </div>
+	<!-- Column 2 / Image Card -->
+	<div class="column is-half">
+    <!-- CARD 2 -->
+  		<div class="card">
+  			<div class="card-image">
+        			<section>
+	<img class="center" src="body.png" width="700px" height="700px" alt="human muscles" usemap="#mapname">
+	<map name="mapname">
+		<!-- CHEST -->
+		<area shape="square" coords="260,180,420,255" href="chest.html" alt="chest">
+		<!-- ARMS -->
+    <area shape="square" coords="0,0,280,170" href="arms.html" alt="arms">
+		<area shape="square" coords="420,0,700,210" href="arms.html" alt="arms">
+		<!-- LEGS -->
+		<area shape="square" coords="0,320,275,700" href="legs.html" alt="legs">
+		<area shape="square" coords="305,370,700,700" href="legs.html" alt="legs">
+		<!-- BACK -->
+		<area shape="square" coords="430,195,465,255" href="back.html" alt="back">
+		<area shape="square" coords="360,260,430,370" href="back.html" alt="back">
+		<!-- CORE -->
+		<area shape="square" coords="260,255,355,370" href="core.html" alt="core">
+	</map>
+</section>
+        </div>
+      </div>
+  </div>
+	<!-- Column 3 / Text Card -->
+	<div class="column is-one-fifth">
+    <!-- CARD 3 -->
+  		<div class = "card">
+      	<div class = "card-content">
+        			<p class="title">INTERACT</p>
+					<div class="content">
+      			<p class = "is-size-6">CLICK A MUSCLE GROUP AND EXPLORE WORKOUTS</p>
+      			<ol type="1">
+      				<li>Chest</li>
+      				<li>Arms</li>
+							<li>Legs</li>
+							<li>Back</li>
+							<li>Core</li>
+    				</ol>
+    			</div>
+  			</div>
+			</div>
+  </div>
+</div>
+	
+
+</body>
+
+</html>
